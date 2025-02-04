@@ -1,0 +1,26 @@
+.empty-state {
+  margin: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.image {
+  width: 40%;
+}
+
+.empty-state-text {
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.clear,
+.add {
+  padding: 10px;
+  color: var(--white);
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}

@@ -1,0 +1,74 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.4rem;
+}
+.search-input {
+  background-color: transparent;
+  color: black;
+  width: 200px;
+  height: 1.5rem;
+}
+
+.home-title {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.item {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(32, 32, 32, 0.1);
+  color: var(--secondary-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #e9eedc;
+}
+
+.item:active {
+  box-shadow: none;
+}
+
+.image-container {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+}
+
+img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.cocktail-name {
+  height: 2rem;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 400px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
+    gap: 20px;
+    justify-content: center;
+    padding: 5px;
+  }
+}
