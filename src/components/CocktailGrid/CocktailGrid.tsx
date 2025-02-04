@@ -16,7 +16,7 @@ const CocktailGrid: React.FC<CocktailGridProps> = ({ cocktailsList }) => {
             <div className="item">
               <div className="image-container">
                 <img
-                  className="image"
+                  className="grid-image"
                   src={cocktail.strDrinkThumb || svg}
                   alt={cocktail.strDrinkThumb}
                 />

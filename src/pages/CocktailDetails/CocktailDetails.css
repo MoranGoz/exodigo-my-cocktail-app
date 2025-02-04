@@ -4,33 +4,34 @@
   justify-content: center;
   align-items: center;
   font-size: 0.8rem;
-  .section {
-    display: flex;
-  }
+}
 
-  .cocktail-name {
-    font-size: 3.2em;
-    line-height: 1.1;
-    font-weight: 700;
-  }
+.section {
+  display: flex;
+}
 
-  .sub-title {
-    font-size: 2em;
-    font-weight: 700;
-  }
+.cocktail-name {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-weight: 700;
+}
 
-  .title {
-    font-weight: bold;
-  }
+.sub-title {
+  font-size: 2em;
+  font-weight: 700;
+}
 
-  .instructions {
-    max-width: 60%;
-    margin: 2rem auto;
-  }
+.title {
+  font-weight: bold;
+}
 
-  .cocktail-image {
-    height: 150px;
-    width: 150px;
-    margin: 2rem auto;
-  }
+.instructions {
+  max-width: 60%;
+  margin: 2rem auto;
+}
+
+.cocktail-image {
+  height: 150px;
+  width: 150px;
+  margin: 2rem auto;
 }

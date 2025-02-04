@@ -1,12 +1,17 @@
 import "./CocktailForm.css";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { maxIngredients } from "../../consts";
 import { CocktailFormState } from "../../types/types";
 import { addNewCocktailToLocalStorage, transformCocktailData } from "../../utils";
+import { CocktailContext } from "../../CocktailContext";
+import { useNavigate } from "react-router-dom";
 
-const categories = ["Cocktail", "Mocktail", "Smoothie", "Other"];
+const categories = ["Cocktail", "Mocktail", "Smoothie", "Coffe/Tea", "Other"];
 
 const CocktailForm = () => {
+  const navigate = useNavigate();
+  const context = useContext(CocktailContext);
+  const { fetchCocktailsFromLocalStorage } = context;
   const [isSubmited, setIsSubmited] = useState<boolean>(false);
   const [formData, setFormData] = useState<CocktailFormState>({
     name: "",
@@ -84,6 +89,7 @@ const CocktailForm = () => {
     if (validateForm()) {
       const newCocktail = transformCocktailData(formData);
       addNewCocktailToLocalStorage(newCocktail);
+      fetchCocktailsFromLocalStorage();
       setIsSubmited(true);
     }
   };
@@ -93,7 +99,14 @@ const CocktailForm = () => {
       {isSubmited ? (
         <>
           <div className="success">Cocktail added successfully</div>
-          <div className="home-btn">Go back to cockatil page</div>
+          <div
+            className="home-btn"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Go back to cockatil page
+          </div>
         </>
       ) : (
         <div className="form-page">
@@ -164,7 +177,7 @@ const CocktailForm = () => {
               </button>
             )}
 
-            <div>
+            <div className="file-section">
               <label>Upload Image (Optional):</label>
               <input type="file" accept="image/*" onChange={handleImageUpload} />
               {formData.image && (

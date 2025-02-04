@@ -18,7 +18,8 @@
   gap: 10px;
 }
 
-.section {
+.section,
+.file-section {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -50,10 +51,20 @@
 
 .add-ingredients,
 .submit {
-  background-color: var(--secondary-color);
-  color: var(--white);
+  margin: auto;
+  width: fit-content;
   padding: 8px;
   cursor: pointer;
+}
+
+.submit {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.add-ingredients {
+  color: var(--secondary-color);
+  background-color: var(--white);
 }
 
 .preview-img {

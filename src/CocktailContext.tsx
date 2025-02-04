@@ -10,6 +10,7 @@ interface CocktailContextType {
   cocktailsList: CocktailType[];
   getCocktailById: (id: string) => CocktailType;
   setSearchTerm: (searchTerm: string) => void;
+  fetchCocktailsFromLocalStorage: () => void;
 }
 
 //TODO CHECK
@@ -79,7 +80,14 @@ export const CocktailProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <CocktailContext.Provider
-      value={{ cocktailsList, loading, getCocktailById, searchTerm, setSearchTerm }}
+      value={{
+        cocktailsList,
+        loading,
+        getCocktailById,
+        searchTerm,
+        setSearchTerm,
+        fetchCocktailsFromLocalStorage,
+      }}
     >
       {children}
     </CocktailContext.Provider>
