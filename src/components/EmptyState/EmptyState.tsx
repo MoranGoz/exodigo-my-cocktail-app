@@ -10,7 +10,7 @@ function EmptyState() {
   return (
     <>
       <div className="empty-state">
-        <img className="image" src={svg} alt="svg" />
+        <img className="svg-image" src={svg} alt="svg" />
         <div className="empty-state-text">No cocktails found</div>
         <div className="clear" onClick={() => setSearchTerm("")}>
           clear search

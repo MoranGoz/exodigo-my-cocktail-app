@@ -7,14 +7,15 @@
   font-weight: bold;
 }
 
-.image {
-  width: 40%;
+.svg-image {
+  width: 20%;
 }
 
 .empty-state-text {
   margin: 1rem;
   font-weight: bold;
   font-size: 2rem;
+  text-align: center;
 }
 
 .clear,
@@ -23,4 +24,10 @@
   color: var(--white);
   border-radius: 10px;
   background-color: var(--secondary-color);
+}
+
+@media (max-width: 400px) {
+  .svg-image {
+    width: 40%;
+  }
 }

@@ -1,13 +1,15 @@
 import "./Home.css";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Loader from "../../components/loader/loader";
 import { CocktailContext } from "../../CocktailContext";
-import EmptyState from "../../components/EmptyState/emptyState";
+import EmptyState from "../../components/EmptyState/EmptyState";
 import CocktailGrid from "../../components/CocktailGrid/CocktailGrid";
 
 function Home() {
+  const navigate = useNavigate();
   const context = useContext(CocktailContext);
+
   const { cocktailsList, loading, searchTerm, setSearchTerm } = context;
 
   return (
@@ -21,9 +23,9 @@ function Home() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
-        <Link to={"/add"}>
-          <div className="add-button">ADD NEW COCKTAIL</div>
-        </Link>
+        <div className="add-button" onClick={() => navigate("/add")}>
+          Add new cocktail
+        </div>
       </div>
       {loading ? (
         <Loader />

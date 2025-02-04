@@ -1,7 +1,6 @@
-import "./App.css";
 import Home from "./pages/Home/Home";
 import { Route, Routes } from "react-router-dom";
-import CocktailForm from "./components/cocktailForm/CocktailForm";
+import CocktailForm from "./components/CocktailForm/CocktailForm";
 import { CocktailProvider } from "./CocktailContext";
 import CocktailDetails from "./pages/CocktailDetails/CocktailDetails";
 

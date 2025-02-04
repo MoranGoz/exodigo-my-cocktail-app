@@ -1,6 +1,7 @@
 import "./CocktailGrid.css";
 import { Link } from "react-router-dom";
 import { CocktailType } from "../../types/types";
+import svg from "../../assets/cocktail.svg";
 
 interface CocktailGridProps {
   cocktailsList: CocktailType[];
@@ -14,7 +15,11 @@ const CocktailGrid: React.FC<CocktailGridProps> = ({ cocktailsList }) => {
           <Link to={`cocktail/${cocktail.idDrink}`} key={cocktail.idDrink}>
             <div className="item">
               <div className="image-container">
-                <img src={cocktail.strDrinkThumb} alt={cocktail.strDrinkThumb} />
+                <img
+                  className="image"
+                  src={cocktail.strDrinkThumb || svg}
+                  alt={cocktail.strDrinkThumb}
+                />
               </div>
               <div className="cocktail-name">{cocktail.strDrink}</div>
             </div>

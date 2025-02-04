@@ -9,18 +9,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --primary-color: #6200ea;
-  --secondary-color: #0a4e69;
+  --secondary-color: #646cff;
   --light-blue: #bde9fb;
   --background: #2c0719;
-  --accent-color: #ff4081;
   --red: #e24949;
-  --color1: #ffcc00;
-  --color2: #ff9900;
-  --Spotify-Green: #1db954;
-  --Black: #191414;
-  --White: #ffffff;
-  --Dark-Grey: #121212;
-  --Light-Grey: #b3b3b3;
+  --white: #ffffff;
   --blue: #646cff;
   background-color: #f0f3e7;
 }
@@ -49,21 +42,4 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (min-width: 400px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-  }
 }

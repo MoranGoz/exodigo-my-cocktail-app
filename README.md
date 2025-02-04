@@ -18,6 +18,8 @@ Installation
 
 Clone the repository: 
 
+git remote add origin https://github.com/MoranGoz/exodigo-my-cocktail-app.git
+
 Navigate to the project folder:
 
 cd my-cocktail-app

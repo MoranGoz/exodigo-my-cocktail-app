@@ -1,7 +1,8 @@
-import { useContext } from "react";
 import "./CocktailDetails.css";
+import svg from "../../assets/cocktail.svg";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { CocktailContext } from "../../cocktailContext";
+import { CocktailContext } from "../../CocktailContext";
 import { maxIngredients } from "../../consts";
 
 function CocktailDetails() {
@@ -23,10 +24,8 @@ function CocktailDetails() {
         <>
           <div className="cocktail-conainer">
             <div className="cocktail-name">{cocktail.strDrink}</div>
-
-            <div>How To Make It Yourself ?!</div>
-
-            <div className=" ingredient">
+            <div className="sub-title">How To Make It Yourself ?!</div>
+            <div className="ingredient">
               <div className="title">Ingredients: </div>
               <ul>
                 {ingredients.map(({ ingredient, measure }, index) => (
@@ -49,7 +48,7 @@ function CocktailDetails() {
             )}
             <img
               className="cocktail-image"
-              src={cocktail.strDrinkThumb}
+              src={cocktail.strDrinkThumb || svg}
               alt={cocktail.strDrinkThumb}
             />
             {cocktail.strCategory && (
@@ -68,7 +67,7 @@ function CocktailDetails() {
           </div>
         </>
       ) : (
-        <div>not found go back to home page</div>
+        <div>cocktail not found go back to cocktails page</div>
       )}
     </>
   );

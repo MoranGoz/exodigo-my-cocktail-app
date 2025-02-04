@@ -7,6 +7,18 @@
   .section {
     display: flex;
   }
+
+  .cocktail-name {
+    font-size: 3.2em;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+
+  .sub-title {
+    font-size: 2em;
+    font-weight: 700;
+  }
+
   .title {
     font-weight: bold;
   }

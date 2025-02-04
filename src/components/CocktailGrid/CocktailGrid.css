@@ -22,8 +22,8 @@
 }
 
 .image-container {
-  height: 200px;
-  width: 200px;
+  max-height: 200px;
+  max-width: 200px;
   margin: auto;
 }
 
@@ -36,19 +36,33 @@ img {
 .cocktail-name {
   height: 2rem;
   text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .header {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 100px));
     gap: 20px;
     justify-content: center;
     padding: 5px;
+  }
+
+  .image-container {
+    height: auto;
+    width: auto;
+    margin: auto;
+  }
+
+  .image {
+    object-fit: contain;
   }
 }

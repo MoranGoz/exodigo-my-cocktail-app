@@ -26,7 +26,7 @@ function AddNewCocktail() {
         <div className="container">
           {cocktailsList.map((cocktail) => (
             <div className="item" key={cocktail.idDrink}>
-              <img src={cocktail.strDrinkThumb} alt="Margarita" />
+              <img src={cocktail.strDrinkThumb} />
               <div>{cocktail.strDrink}</div>
             </div>
           ))}
