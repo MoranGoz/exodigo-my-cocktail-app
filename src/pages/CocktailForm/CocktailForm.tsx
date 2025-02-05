@@ -139,25 +139,29 @@ const CocktailForm = () => {
 
             {formData.ingredients.map((ing, index) => (
               <div key={index} className="ingredient-group">
-                <input
-                  type="text"
-                  placeholder="Ingredient"
-                  value={ing.ingredient}
-                  onChange={(e) => handleIngredientChange(index, "ingredient", e.target.value)}
-                />
-                {errors[`ingredient-${index}`] && (
-                  <span className="error-text">{errors[`ingredient-${index}`]}</span>
-                )}
+                <div className="ingredient">
+                  <input
+                    type="text"
+                    placeholder="Ingredient"
+                    value={ing.ingredient}
+                    onChange={(e) => handleIngredientChange(index, "ingredient", e.target.value)}
+                  />
+                  {errors[`ingredient-${index}`] && (
+                    <span className="error-text">{errors[`ingredient-${index}`]}</span>
+                  )}
+                </div>
 
-                <input
-                  type="text"
-                  placeholder="Measure"
-                  value={ing.measure}
-                  onChange={(e) => handleIngredientChange(index, "measure", e.target.value)}
-                />
-                {errors[`measure-${index}`] && (
-                  <span className="error-text">{errors[`measure-${index}`]}</span>
-                )}
+                <div className="measure">
+                  <input
+                    type="text"
+                    placeholder="Measure"
+                    value={ing.measure}
+                    onChange={(e) => handleIngredientChange(index, "measure", e.target.value)}
+                  />
+                  {errors[`measure-${index}`] && (
+                    <span className="error-text">{errors[`measure-${index}`]}</span>
+                  )}
+                </div>
 
                 {formData.ingredients.length > 1 && (
                   <button

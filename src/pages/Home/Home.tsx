@@ -9,7 +9,6 @@ import CocktailGrid from "../../components/CocktailGrid/CocktailGrid";
 function Home() {
   const navigate = useNavigate();
   const context = useContext(CocktailContext);
-
   const { cocktailsList, loading, searchTerm, setSearchTerm } = context;
 
   return (
@@ -29,7 +28,7 @@ function Home() {
       </div>
       {loading ? (
         <Loader />
-      ) : cocktailsList.length ? (
+      ) : cocktailsList.length || !searchTerm ? (
         <CocktailGrid cocktailsList={cocktailsList} />
       ) : (
         <EmptyState />

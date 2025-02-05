@@ -1,19 +1,8 @@
-import { CocktailType } from "./types/types";
+import { CocktailContextType, CocktailType } from "./types/types";
 import { USER_COCKTAIL_LIST } from "./consts";
 import { getCocktailsData } from "./Api/HttpService";
 import localStorageService from "./services/localStorage";
 import { createContext, useState, useEffect, ReactNode, useCallback } from "react";
-
-interface CocktailContextType {
-  loading: boolean;
-  searchTerm: string;
-  cocktailsList: CocktailType[];
-  getCocktailById: (id: string) => CocktailType;
-  setSearchTerm: (searchTerm: string) => void;
-  fetchCocktailsFromLocalStorage: () => void;
-}
-
-//TODO CHECK
 
 export const CocktailContext = createContext<CocktailContextType>({} as CocktailContextType);
 
@@ -83,8 +72,8 @@ export const CocktailProvider = ({ children }: { children: ReactNode }) => {
       value={{
         cocktailsList,
         loading,
-        getCocktailById,
         searchTerm,
+        getCocktailById,
         setSearchTerm,
         fetchCocktailsFromLocalStorage,
       }}

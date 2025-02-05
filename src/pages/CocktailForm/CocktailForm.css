@@ -29,12 +29,20 @@
   color: var(--red);
   font-size: 12px;
   margin-top: 2px;
+  text-align: center;
 }
 
 .ingredient-group {
+  margin: auto;
   display: flex;
   gap: 5px;
-  align-items: center;
+  align-items: baseline;
+}
+
+.ingredient,
+.measure {
+  display: flex;
+  flex-direction: column;
 }
 
 .ingredient-group input {
@@ -90,6 +98,18 @@
   background-color: var(--secondary-color);
   width: fit-content;
   cursor: pointer;
+}
+
+.add-ingredients,
+.submit {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
 
 @media (max-width: 400px) {

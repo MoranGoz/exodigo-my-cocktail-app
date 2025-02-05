@@ -19,7 +19,16 @@ export type CocktailFormState = {
   idDrink?: number;
 };
 
-type CocktailFull = {
+export type CocktailContextType = {
+  loading: boolean;
+  searchTerm: string;
+  cocktailsList: CocktailType[];
+  getCocktailById: (id: string) => CocktailType;
+  setSearchTerm: (searchTerm: string) => void;
+  fetchCocktailsFromLocalStorage: () => void;
+};
+
+export type CocktailFull = {
   idDrink: string;
   strDrink: string;
   strDrinkAlternate: string | null;

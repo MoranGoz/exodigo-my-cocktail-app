@@ -1,7 +1,7 @@
 import "./CocktailGrid.css";
 import { Link } from "react-router-dom";
-import { CocktailType } from "../../types/types";
 import svg from "../../assets/cocktail.svg";
+import { CocktailType } from "../../types/types";
 
 interface CocktailGridProps {
   cocktailsList: CocktailType[];
